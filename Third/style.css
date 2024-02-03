@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+*::selection{
+    background-color: #bbe4e4;
+    color: #ff0000;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+#mode{
+    height: 2.5vw;
+    width: 5.5vw;
+    background: #222;
+    border-radius: 5vw;
+    appearance: none;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#mode::before{
+    height: 2.5vw;
+    width: 2.5vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 2.5vw;
+    transform: scale(0.9);
+    transition: 0.5s;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                inset 0 4px 4px rgba(255, 255, 255, 0.2),
+                inset 0 -4px 4px rgba(255, 255, 255, 0.2)
+}
+#mode:checked{
+    background: #fff;
+    box-shadow: inset 0  2px 60px  rgba(0, 0, 0, 0.1),
+        inset 0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 -4px 4px rgba(0, 0, 0, 0.05)
+}
+#mode:checked::before{
+left: 2.9vw;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+            inset  4px 4px rgba(255, 255, 255, 1),
+            inset -4px 4px rgba(255, 255, 255, 1);
+background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+}
+#mode::after{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    /* background: #2b2b2b; */
+    top: 80px;
+    left: 160px;
+    z-index: -1;
+    transform:  translate(-60%,-40%);
+    transition: 0.5s;
+}
+/* #mode:has(input:checked){
+    background-color: red;
+} */
+.nav{
+    height: 18vh;
+    width: 100%;
+    border-bottom: 2.5px solid rgba(174, 175, 175, 0.295);
+    /* background-color: #69b2f7; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    /* background-color: #fff; */
+    color: blue;
+    margin-left: 1.2vw;
+    font-size: 2vw;
+    font-weight: 900;
+}
+.logo span{
+color: red;
+}
+.menu{
+    
+    margin-right: 1.8vw;
+    width: 35vw;
+    /* background-color: green; */
+}
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1.5vw;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: 700;
+    transition: all ease 0.5s;
+}
+.menu ul li a:hover{
+    
+    border-bottom: 2px solid rgb(255, 0, 0);
+    border-top: 2px solid rgb(255, 0, 0);
+}
+#boxing{
+color: red;
+}
+#boxing:hover{
+    border-bottom: 2px solid blue;
+    border-top: 2px solid blue;
+}
+.main{
+    display: flex;
+    /* background-color: green; */
+    height: 80vh;
+    width: 100%;
+}
+.info{
+/* background-color: yellow; */
+height: 45vh;
+width: 50%;
+margin: 10.5vw 5vw;
+padding: 4.5vw 0;
+}
+.h2>h2{
+    font-size: 3vw;
+    font-weight: bold;
+    color: blue;
+    line-height: 8vh;
+}
+.info h2 span{
+    font-size: 3vw;
+    font-weight: bold;
+    color: red;
+}
+.info p{
+    margin-top: 2vh;
+    line-height: 5vh;
+    font-size: 1.15vw;
+    font-weight: 100;
+}
+.box{
+    background-color: none;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tv{
+    border-left: 12px solid #ff0000;
+    border-right: 12px solid #ff0000;
+    border-top: 12px solid #0000ff;
+    border-bottom: 12px solid #0000ff;
+    height: 53.2vh;
+    width: 80%;
+    z-index: 99;
+}
+.tv iframe{
+    width: 100%;
+    height:100%;
+}
+.stand{
+    z-index: 1;
+    background-color: none;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     margin-top: 2.9vh;
+}
+.stand1{
+    background-color: #0000ff;
+    height: 20%;
+    width: 15%;
+    rotate: -45deg;
+}
+.stand2{
+    background-color: #ff0000;
+    height: 20%;
+    width: 15%;
+    rotate: 45deg;
+}
+button{
+    margin-top: 2vh;
+    text-align: center;
+    height: 2.5vw;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 1vh;
+    transition: all ease 0.5s;
+}
+button:hover{
+    cursor: pointer;
+    scale: 1.2;
+}
+#st{
+width: 6.5vw;
+background-color: red;
+}     
+#nd{
+    margin-left: 1vw;
+    width: 5.5vw;
+    background-color: blue;
+}
